@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+   
+   
+    <title>React App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9ad8391439.js" crossorigin="anonymous"></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@100&display=swap'); </style>
+   
+
+  </head>
+  <body style="background-color: white;">
+   
+   
+    
+    <div id="root"></div>
+   <script type="text/javascript">
+      function createBubble(){
+          const section = document.querySelector('section')
+          const createElement = document.createElement('span')
+          var size = Math.random()*60;
+
+          createElement.style.width =20 + size + 'px';
+          createElement.style.height = 20 + size + 'px';
+          createElement.style.left=Math.random()*innerWidth +'px';
+          section.appendChild(createElement);
+
+          setTimeout(()=>{
+              createElement.remove()
+          },4000)
+
+      }
+      setInterval(createBubble,90)
+
+  </script> 
+    
+   
+  </body>
+</html>
